@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag'n'Drop</title>
+    <link href="/style/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="drop-area">
+        <form class="my-form">
+            <p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+            <input type="file"
+                   id="fileElem"
+                   multiple accept="image/*"
+                   onchange="handleFiles(this.files)"
+                   name="sampleFile">
+            <label class="button" for="fileElem">Select some images</label>
+        </form>
+
+        <div id="gallery"></div>
+        <progress id="progress-bar" max=100 value=0></progress>
+    </div>
+
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
